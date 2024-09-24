@@ -15,7 +15,7 @@ target_link_directories(geographiclib
 target_include_directories(geographiclib
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/geographiclib>
+  $<INSTALL_INTERFACE:include>
 )
 
 target_link_libraries(geographiclib
@@ -40,7 +40,7 @@ install(TARGETS geographiclib
 
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/include/GeographicLib"
-  DESTINATION include/geographiclib
+  DESTINATION include
 )
 
 install(FILES
